@@ -62,7 +62,7 @@ public class HelloController {
             btnLogin.getScene().getWindow().hide();
 
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MainApp.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+            Scene scene = new Scene(fxmlLoader.load(), 700, 600);
             Stage stage = new Stage();
             stage.setTitle("welcome");
 //            stage.setResizable(false);
