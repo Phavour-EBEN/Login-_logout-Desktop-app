@@ -17,7 +17,9 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.function.DoublePredicate;
 
 public class HelloController {
 
@@ -239,6 +241,17 @@ public class HelloController {
             String text = readFile.nextLine();
             txtEditor.appendText(text+"\n");
         }
+        readFile.close();
+    }
+    public void saveTextFile() throws FileNotFoundException {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("select Text File");
+
+        String path = ""+fileChooser.showSaveDialog(null).getAbsolutePath();
+
+        PrintWriter output = new PrintWriter(path);
+        String text = txtEditor.getText();
+        output.println(text);
     }
 
 }

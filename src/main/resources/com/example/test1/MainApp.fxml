@@ -26,7 +26,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnSaveTextFile" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" text="Save Text File" textFill="#43b42f">
+            <Button fx:id="btnSaveTextFile" mnemonicParsing="false" onAction="#saveTextFile" prefHeight="30.0" prefWidth="117.0" text="Save Text File" textFill="#43b42f">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font>
