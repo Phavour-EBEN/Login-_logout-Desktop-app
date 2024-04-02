@@ -11,9 +11,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class HelloController {
 
@@ -219,6 +223,22 @@ public class HelloController {
     }
     public void fontFantasy(){
         txtEditor.setFont(Font.font("Fantasy", FontPosture.ITALIC,20));
+    }
+
+    public void OpenTextFile() throws FileNotFoundException {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Text File");
+//        now we the path of the file
+        String path = ""+fileChooser.showOpenDialog(null).getAbsolutePath();
+        File inputFile = new File(path);
+
+        Scanner readFile = new Scanner(inputFile);
+        txtEditor.setText("");//txtEditor.setText(null)
+
+        while (readFile.hasNextLine()){
+            String text = readFile.nextLine();
+            txtEditor.appendText(text+"\n");
+        }
     }
 
 }

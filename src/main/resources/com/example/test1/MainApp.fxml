@@ -21,7 +21,7 @@
    <bottom>
       <HBox spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnOpenTextFile" mnemonicParsing="false" prefHeight="30.0" prefWidth="126.0" text="Open Text File" textFill="#1f38fa">
+            <Button fx:id="btnOpenTextFile" mnemonicParsing="false" onAction="#OpenTextFile" prefHeight="30.0" prefWidth="126.0" text="Open Text File" textFill="#1f38fa">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -64,18 +64,18 @@
             <items>
                   <Menu mnemonicParsing="false" text="Font Size">
                     <items>
-                      <MenuItem fx:id="font10" mnemonicParsing="false" text="10" />
-                        <MenuItem fx:id="font12" mnemonicParsing="false" text="12" />
-                        <MenuItem fx:id="font18" mnemonicParsing="false" text="18" />
-                        <MenuItem fx:id="font20" mnemonicParsing="false" text="20" />
+                      <MenuItem fx:id="font10" mnemonicParsing="false" onAction="#font10" text="10" />
+                        <MenuItem fx:id="font12" mnemonicParsing="false" onAction="#font12" text="12" />
+                        <MenuItem fx:id="font18" mnemonicParsing="false" onAction="#font18" text="18" />
+                        <MenuItem fx:id="font20" mnemonicParsing="false" onAction="#font20" text="20" />
                     </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Font Type">
                     <items>
-                      <MenuItem fx:id="fontTypeArial" mnemonicParsing="false" text="Arial" />
-                        <MenuItem fx:id="fontTypeMonospace" mnemonicParsing="false" text="Monospace" />
-                        <MenuItem fx:id="fontTypeNewTimes" mnemonicParsing="false" text="New Times Roman" />
-                        <MenuItem fx:id="fontTypeFantasy" mnemonicParsing="false" text="Fantasy" />
+                      <MenuItem fx:id="fontTypeArial" mnemonicParsing="false" onAction="#fontArial" text="Arial" />
+                        <MenuItem fx:id="fontTypeMonospace" mnemonicParsing="false" onAction="#fontMonspace" text="Monospace" />
+                        <MenuItem fx:id="fontTypeNewTimes" mnemonicParsing="false" onAction="#fontNewTimesRoman" text="New Times Roman" />
+                        <MenuItem fx:id="fontTypeFantasy" mnemonicParsing="false" onAction="#fontFantasy" text="Fantasy" />
                     </items>
                   </Menu>
             </items>
