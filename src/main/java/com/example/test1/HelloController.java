@@ -5,10 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.chart.LineChart;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -29,6 +29,80 @@ public class HelloController {
 
     @FXML
     private Button btnLogout;
+
+    @FXML
+    private Button btnLoadImage;
+
+
+    @FXML
+    private Button btnOpenTextFile;
+
+    @FXML
+    private Button btnPlotGraph;
+
+    @FXML
+    private Button btnSaveTextFile;
+
+    @FXML
+    private Button btnShowEditor;
+
+    @FXML
+    private Button btnSowGraph;
+
+    @FXML
+    private Button btnViewImage;
+
+    @FXML
+    private MenuItem font10;
+
+    @FXML
+    private MenuItem font12;
+
+    @FXML
+    private MenuItem font18;
+
+    @FXML
+    private MenuItem font20;
+
+    @FXML
+    private MenuItem fontTypeArial;
+
+    @FXML
+    private MenuItem fontTypeFantasy;
+
+    @FXML
+    private MenuItem fontTypeMonospace;
+
+    @FXML
+    private MenuItem fontTypeNewTimes;
+
+    @FXML
+    private ImageView imgImageView;
+
+    @FXML
+    private LineChart<String,Integer> lineGraph;
+
+    @FXML
+    private MenuItem menuAbout;
+
+    @FXML
+    private MenuItem mnClose;
+
+    @FXML
+    private BorderPane paneDeveloper;
+
+
+    @FXML
+    private BorderPane paneEditor;
+
+    @FXML
+    private BorderPane paneGraph;
+
+    @FXML
+    private BorderPane paneImage;
+
+    @FXML
+    private TextArea txtEditor;
 
     @FXML
     void onLogout(ActionEvent event) throws IOException {
@@ -77,6 +151,47 @@ public class HelloController {
         txtUsername.setText("");
         txtPassword.setText("");
 
+    }
+    public void about(){
+        paneDeveloper.setVisible(true);
+        paneEditor.setVisible(false);
+        paneGraph.setVisible(false);
+        paneImage.setVisible(false);
+        btnLoadImage.setVisible(false);
+        btnSaveTextFile.setVisible(false);
+        btnPlotGraph.setVisible(false);
+        btnOpenTextFile.setVisible(false);
+    }
+
+    public void vewTextEditor(){
+        paneDeveloper.setVisible(false);
+        paneEditor.setVisible(true);
+        paneGraph.setVisible(false);
+        paneImage.setVisible(false);
+        btnLoadImage.setVisible(false);
+        btnSaveTextFile.setVisible(true);
+        btnPlotGraph.setVisible(false);
+        btnOpenTextFile.setVisible(true);
+    }
+    public void viewImages(){
+        paneDeveloper.setVisible(false);
+        paneEditor.setVisible(false);
+        paneGraph.setVisible(false);
+        paneImage.setVisible(true);
+        btnLoadImage.setVisible(true);
+        btnSaveTextFile.setVisible(false);
+        btnPlotGraph.setVisible(false);
+        btnOpenTextFile.setVisible(false);
+    }
+    public void viewGraph(){
+        paneDeveloper.setVisible(false);
+        paneEditor.setVisible(false);
+        paneGraph.setVisible(true);
+        paneImage.setVisible(false);
+        btnLoadImage.setVisible(false);
+        btnSaveTextFile.setVisible(false);
+        btnPlotGraph.setVisible(true);
+        btnOpenTextFile.setVisible(false);
     }
 
 }

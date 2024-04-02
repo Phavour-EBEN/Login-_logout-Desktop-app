@@ -82,7 +82,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem fx:id="menuAbout" mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="menuAbout" mnemonicParsing="false" onAction="#about" text="About" />
             </items>
           </Menu>
         </menus>
@@ -91,9 +91,9 @@
    <left>
       <VBox spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnShowEditor" mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" text="Text Editor" textAlignment="CENTER" />
-            <Button fx:id="btnViewImage" mnemonicParsing="false" text="Image Viewer" textAlignment="CENTER" />
-            <Button fx:id="btnSowGraph" mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" text="Plot Graph" textAlignment="CENTER" textFill="#bf1313">
+            <Button fx:id="btnShowEditor" mnemonicParsing="false" onAction="#vewTextEditor" prefHeight="26.0" prefWidth="89.0" text="Text Editor" textAlignment="CENTER" />
+            <Button fx:id="btnViewImage" mnemonicParsing="false" onAction="#viewImages" text="Image Viewer" textAlignment="CENTER" />
+            <Button fx:id="btnSowGraph" mnemonicParsing="false" onAction="#viewGraph" prefHeight="26.0" prefWidth="89.0" text="Plot Graph" textAlignment="CENTER" textFill="#bf1313">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -110,11 +110,6 @@
    <center>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <BorderPane fx:id="paneEditor" prefHeight="200.0" prefWidth="200.0">
-               <center>
-                  <TextArea fx:id="txtEditor" prefHeight="500.0" prefWidth="500.0" BorderPane.alignment="CENTER" />
-               </center>
-            </BorderPane>
             <BorderPane fx:id="paneImage" prefHeight="200.0" prefWidth="200.0">
                <center>
                   <ImageView fx:id="imgImageView" fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
@@ -132,13 +127,18 @@
                   </LineChart>
                </center>
             </BorderPane>
-            <BorderPane prefHeight="200.0" prefWidth="200.0">
+            <BorderPane fx:id="paneDeveloper" prefHeight="200.0" prefWidth="200.0">
                <center>
                   <Label text="Developed by EBEN" BorderPane.alignment="CENTER">
                      <font>
                         <Font name="System Bold Italic" size="13.0" />
                      </font>
                   </Label>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="paneEditor" prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <TextArea fx:id="txtEditor" prefHeight="500.0" prefWidth="500.0" BorderPane.alignment="CENTER" />
                </center>
             </BorderPane>
          </children>
