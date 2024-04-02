@@ -9,6 +9,8 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -192,6 +194,31 @@ public class HelloController {
         btnSaveTextFile.setVisible(false);
         btnPlotGraph.setVisible(true);
         btnOpenTextFile.setVisible(false);
+    }
+    public void font10(){
+        txtEditor.setFont(Font.font(10));
+    }
+
+    public void font12(){
+        txtEditor.setFont(Font.font(12));
+    }
+    public void font18(){
+        txtEditor.setFont(Font.font(18));
+    }
+    public void font20(){
+        txtEditor.setFont(Font.font(20));
+    }
+    public void fontArial(){
+        txtEditor.setFont(Font.font("Arail",FontPosture.REGULAR,12));
+    }
+    public void fontMonspace(){
+        txtEditor.setFont(Font.font("Monospace"));
+    }
+    public void fontNewTimesRoman(){
+        txtEditor.setFont(Font.font("New Times Roman",FontPosture.ITALIC,12));
+    }
+    public void fontFantasy(){
+        txtEditor.setFont(Font.font("Fantasy", FontPosture.ITALIC,20));
     }
 
 }
