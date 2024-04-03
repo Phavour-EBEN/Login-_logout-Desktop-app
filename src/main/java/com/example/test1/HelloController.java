@@ -253,5 +253,4 @@ public class HelloController {
         String text = txtEditor.getText();
         output.println(text);
     }
-
 }
